@@ -7,6 +7,7 @@ on:
       - 'apps/**'
       - 'environments/**'
       - '.github/workflows/**'
+  workflow_dispatch:
 
 jobs:
   # Job 1: Desplegar a Dev (automático)

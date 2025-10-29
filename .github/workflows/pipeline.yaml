@@ -95,4 +95,11 @@ jobs:
           echo "⏳ Esperando a que termine el despliegue..."
           kubectl rollout status deployment/prod-webapp -n prod --timeout=5m
 
-      - name: Verify production dep
+      - name: Verify production deployment
+        run: |
+          echo "✅ Verificando el despliegue..."
+          kubectl get pods -n prod -l app=webapp
+          kubectl get svc -n prod
+
+      - name: ✅ Production deployment complete
+        run: echo "✅ ¡Despliegue en producción finalizado!"

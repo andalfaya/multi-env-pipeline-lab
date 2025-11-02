@@ -13,7 +13,7 @@ jobs:
   # Job 1: Desplegar a Dev (automático)
   deploy-dev:
     name: 🚀 Deploy a Dev
-    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    # if: github.ref == 'refs/heads/master' && github.event_name == 'push' # commented to allow other triggers differnet master branch
     runs-on: self-hosted
     environment:
       name: dev
